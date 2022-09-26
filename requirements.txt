@@ -1,0 +1,4 @@
+httpx==0.23.0
+loguru==0.6.0
+nonebot==1.9.1
+ujson==5.5.0
