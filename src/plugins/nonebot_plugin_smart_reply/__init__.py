@@ -37,7 +37,7 @@ async def _(event: MessageEvent):
     # 去掉带中括号的内容(去除cq码)
     msg = re.sub(r"\[.*?\]", "", msg)
     # 如果是光艾特bot(没消息返回)或者打招呼的话,就回复以下内容
-    if (not msg) or msg.isspace() or msg in [
+    if msg.isspace() or msg in [
         "你好啊",
         "你好",
         "在吗",
@@ -48,6 +48,10 @@ async def _(event: MessageEvent):
         "在",
     ]:
         await ai.finish(Message(random.choice(hello__reply)))
+    #关于
+    if (not msg):
+        message="你好！我是垃圾bot！\n我的家：https://github.com/hitptep/rubbishbot\n我的教程：http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html"
+        await ai.finish(message=message)
     # 获取用户nickname
     if isinstance(event, GroupMessageEvent):
         nickname = event.sender.card or event.sender.nickname
@@ -57,14 +61,14 @@ async def _(event: MessageEvent):
     result = await get_chat_result(msg,  nickname)
     # 如果词库没有结果，则调用api获取智能回复
     if result == None:
-        if api_flag:
-            qinyun_url = f"http://api.qingyunke.com/api.php?key=free&appid=0&msg={msg}"
-            message = await qinyun_reply(qinyun_url)
-            logger.info("来自青云客的智能回复: " + message)
-        else:
-            xiaoai_url = f"https://jintia.jintias.cn/api/xatx.php?msg={msg}"
-            message = await xiaoice_reply(xiaoai_url)
-            logger.info("来自小爱同学的智能回复: " + message)
+        # if api_flag:
+        #     qinyun_url = f"http://api.qingyunke.com/api.php?key=free&appid=0&msg={msg}"
+        #     message = await qinyun_reply(qinyun_url)
+        #     logger.info("来自青云客的智能回复: " + message)
+        # else:
+        xiaoai_url = f"https://jintia.jintias.cn/api/xatx.php?msg={msg}"
+        message = await xiaoice_reply(xiaoai_url)
+        logger.info("来自小爱同学的智能回复: " + message)
         await ai.finish(message=message)
     await ai.finish(Message(result))
 

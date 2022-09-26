@@ -33,4 +33,4 @@ universal: ws://127.0.0.1:这里填写.env文件中的PORT/onebot/v11/ws
 
 ### 三、开启go-cqhttps，运行bot.py
 
-### *<u>**详细教程：[点我](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.0.0-rc3)**</u>*
+### *<u>**详细教程：[点我](http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html)**</u>*
