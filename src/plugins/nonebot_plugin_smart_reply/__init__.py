@@ -49,7 +49,7 @@ async def _(event: MessageEvent):
     ]:
         await ai.finish(Message(random.choice(hello__reply)))
     #关于
-    if (not msg):
+    if (not msg) or msg=="about":
         message="你好！我是垃圾bot！\n我的家：https://github.com/hitptep/rubbishbot\n我的教程：http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html"
         await ai.finish(message=message)
     # 获取用户nickname
