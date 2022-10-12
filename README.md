@@ -30,6 +30,8 @@ universal: ws://127.0.0.1:这里填写.env文件中的PORT/onebot/v11/ws
 
 也可以修改config.yml中的QQ号和密码，不修改就使用二维码登录。
 
+PS:go-cqhttp开发者的服务器好像被墙了，记得科学上网QAQ
+
 
 
 ### 三、开启go-cqhttps，运行bot.py
