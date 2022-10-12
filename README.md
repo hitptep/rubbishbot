@@ -36,4 +36,4 @@ PS:go-cqhttp开发者的服务器好像被墙了，记得科学上网QAQ
 
 ### 三、开启go-cqhttps，运行bot.py
 
-### *<u>**详细教程：[点我](http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html)**</u>*
+### *<u>**详细教程：[点我](http://blog.zzy.monster/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html)**</u>*
