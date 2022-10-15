@@ -28,7 +28,7 @@ async def friend_req(bot: Bot, event: FriendRequestEvent, state: T_State):
     logger.debug('friend req called')
     logger.debug(event.json())
     await bot.call_api('set_friend_add_request', flag=event.flag, approve=True)
-    message = "你好！我是垃圾bot！\n我的家：https://github.com/hitptep/rubbishbot\n我的教程：http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html"
+    message = "你好！我是垃圾bot！很高兴和你成为朋友！"
     await ai.finish(message=message)
     # await bot.set_friend_add_request()
 
@@ -42,6 +42,6 @@ async def group_req(bot: Bot, event: GroupRequestEvent, state: T_State):
     logger.debug(event.json())
     logger.debug(event.flag)
     await bot.call_api('set_group_add_request', flag=event.flag, approve=True)
-    message = "你好！我是垃圾bot！\n我的家：https://github.com/hitptep/rubbishbot\n我的教程：http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html"
+    message = "你好！我是垃圾bot！本bot比较智障，希望群u多多包涵！"
     await ai.finish(message=message)
     # await bot.set_group_add_request(approve=True)

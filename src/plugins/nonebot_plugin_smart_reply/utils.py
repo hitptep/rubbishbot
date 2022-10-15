@@ -81,11 +81,4 @@ async def qinyun_reply(url):
             res = Bot_NICKNAME + "暂时听不懂主人说的话呢"
         return res
 
-# 从小爱同学api拿到消息, 这个api私货比较少
-async def xiaoice_reply(url):
-    async with AsyncClient() as client:
-        res = (await client.get(url)).text
-        res = res[res.find("{"):res.rfind("}")+1]
-        res = json.loads(res)
-        res = res["text"].replace("小爱", Bot_NICKNAME)
-        return res
+
