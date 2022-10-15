@@ -13,13 +13,13 @@ import urllib3
 # 处理api返回的json数据
 import os
 
-paint = on_message(rule=startswith("piant"), priority=1, block=True)
+paint = on_message(rule=startswith("paint"), priority=1, block=True)
 
 
 @paint.handle()
 async def handle_first_receive(bot: Bot, event: Event):
     msg = str(event.get_message())
-    msg = msg.lstrip("piant")
+    msg = msg.lstrip("paint")
     logger.info("发送图片:" + msg)
     img_path=get_pic(msg)
     await paint.send(MessageSegment.image("file://"+img_path))
