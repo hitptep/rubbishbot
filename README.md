@@ -21,16 +21,19 @@ COMMAND_START=["#", ""]  # 配置命令起始字符
 COMMAND_SEP=["."]  # 配置命令分割字符
 ```
 
-### 二、修改src中gocqhttps文件夹下的config.yml
+### 二、下载go-cqhttps
 
+请在[go-cqhttps Release](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.0.0-rc3)页面上下载系统对应的安装程序，按照安装程序运行（选择反向Websocket)后自行修改config.yml。
 ```
 universal: ws://127.0.0.1:这里填写.env文件中的PORT/onebot/v11/ws
 ```
 
 也可以修改config.yml中的QQ号和密码，不修改就使用二维码登录。
 
-若不是Windows 64位系统，请在[go-cqhttps Release](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.0.0-rc3)页面上下载系统对应的安装程序复制到src中gocqhttp文件夹内，按照安装程序运行（选择反向Websocket)后自行修改config.yml。
+PS:go-cqhttp开发者的服务器好像被墙了，记得科学上网QAQ
+
+
 
 ### 三、开启go-cqhttps，运行bot.py
 
-### *<u>**详细教程：[点我](http://zzy.js.cool/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html)**</u>*
+### *<u>**详细教程：[点我](http://blog.zzy.monster/posts/2022/09/26/Python%E6%90%AD%E5%BB%BAQQbot.html)**</u>*
