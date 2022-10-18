@@ -8,7 +8,7 @@ from src.plugins.nonebot_plugin_aipaint import abspath
 folder_path = abspath.load_file()
 
 
-def get_pic(prompt, style='3'):
+def get_pic(prompt, style='32'):
     s = requests.session()
     login_url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key' \
                 '=AIzaSyDCvp5MTJLUdtBYEKYWXJrlLzu1zuKM6Xw '
