@@ -2,12 +2,12 @@ import json
 import os
 import time
 import requests
-
+import timeout_decorator
 from src.plugins.nonebot_plugin_aipaint import abspath
 
 folder_path = abspath.load_file()
 
-
+@timeout_decorator.timeout(20, use_signals=False)
 def get_pic(prompt, style='32'):
     s = requests.session()
     login_url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key' \
