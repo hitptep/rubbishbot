@@ -21,5 +21,8 @@ async def handle_first_receive(bot: Bot, event: Event):
     msg = msg.lstrip("paint")
     logger.info("发送图片:" + msg)
     img_path=get_pic(msg)
-    await yydz.send(MessageSegment.image("file://"+img_path))
+    if img_path == "timeout":
+        await yydz.send(MessageSegment.text("超时了！再超时就超市里～"))
+    else:
+        await yydz.send(MessageSegment.image("file://"+img_path))
     os.remove(img_path)

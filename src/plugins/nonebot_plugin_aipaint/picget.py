@@ -7,8 +7,8 @@ from src.plugins.nonebot_plugin_aipaint import abspath
 
 folder_path = abspath.load_file()
 
-@timeout_decorator.timeout(20, use_signals=False)
-def get_pic(prompt, style='32'):
+@timeout_decorator.timeout(20)
+def get(prompt, style='32'):
     s = requests.session()
     login_url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key' \
                 '=AIzaSyDCvp5MTJLUdtBYEKYWXJrlLzu1zuKM6Xw '
@@ -58,3 +58,9 @@ def get_pic(prompt, style='32'):
     print(f'下载完毕,路径：{img_path}')
     return img_path
 
+def get_pic (prompt, style='32'):
+    try:
+        return get(prompt,style='32')
+    except Exception as e:
+        print("超时！！")
+        return "timeout"
