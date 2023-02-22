@@ -1,4 +1,4 @@
-# 垃圾bot：基于Nonebot2和go-cqhttps的第五人格聊天群QQbot
+# 垃圾bot：基于Nonebot2和go-cqhttps的聊天群QQbot
 
 **<u>声明：本项目仅供学习使用，禁止用作商业用途，使用时请遵循GPL许可证</u>**
 
