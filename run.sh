@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /root/rubbishbot &&
+cd /home/zzy/rubbishbot &&
 nohup python3 bot.py
