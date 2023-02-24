@@ -16,4 +16,4 @@ rubbishhelp = on_message(rule=startswith("help"), priority=1, block=True)
 
 @rubbishhelp.handle()
 async def handle_first_receive(bot: Bot, event: Event):
-    await rubbishhelp.send(MessageSegment.text("我是啵啵bot，目前有以下功能：\n①ChatGPT聊天：艾特机器人并搭配文字即可聊天\n②自动加群/好友:机器人会自动同意好友和群请求\n③随机发送一张顶针图:发以丁真为开头的话，即可收到一张一眼丁真的祝福"))
+    await rubbishhelp.send(MessageSegment.text("我是啵啵bot，目前有以下功能：\n①ChatGPT聊天：艾特机器人并搭配文字即可聊天\n②自动加群/好友:机器人会自动同意好友和群请求\n③随机发送一张顶针图:发以丁真为开头的话，即可收到一张一眼丁真的祝福\n￥￥￥￥￥Star我的仓库，Star我的仓库谢谢喵https://github.com/hitptep/rubbishbot.git￥￥￥￥￥"))

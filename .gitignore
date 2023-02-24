@@ -154,3 +154,4 @@ cython_debug/
 .env
 
 gocqhttps/
+/config.yml
